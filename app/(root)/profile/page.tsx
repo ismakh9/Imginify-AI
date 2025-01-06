@@ -62,3 +62,13 @@
 // };
 
 // export default Profile;
+
+import React from 'react'
+
+const Profile = () => {
+  return (
+    <div>Profilepage</div>
+  )
+}
+
+export default Profile

@@ -78,3 +78,13 @@
 // };
 
 // export default Credits;
+
+import React from 'react'
+
+const Credits = () => {
+  return (
+    <div>Creditpage</div>
+  )
+}
+
+export default Credits
