@@ -9,7 +9,9 @@ import { handleError } from "../utils";
 // CREATE
 export async function createUser(user: CreateUserParams) {
   try {
+    console.log("Connecting to database for user creation...");
     await connectToDatabase();
+    console.log("Database connected for user creation");
 
     const newUser = await User.create(user);
 
@@ -55,7 +57,7 @@ export async function updateUser(clerkId: string, user: UpdateUserParams) {
 export async function deleteUser(clerkId: string) {
   try {
     await connectToDatabase();
-
+    console.log('database connected and user deleted')
     // Find user to delete
     const userToDelete = await User.findOne({ clerkId });
 
