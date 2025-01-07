@@ -16,12 +16,12 @@ import { Button } from "@/components/ui/button"
 
 import {
   Form,
-  // FormControl,
-  // FormDescription,
-  // FormField,
-  // FormItem,
-  // FormLabel,
-  // FormMessage,
+  FormControl,
+  FormDescription,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
 } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
 import { aspectRatioOptions, creditFee, defaultValues, transformationTypes } from "@/constants"
@@ -71,7 +71,7 @@ const TransformationForm = ({ action, data = null, userId, type, creditBalance, 
   // 2. Define a submit handler.
   async function onSubmit(values: z.infer<typeof formSchema>) {
     setIsSubmitting(true);
-    console.log(isPending)
+
     if(data || image) {
       const transformationUrl = getCldImageUrl({
         width: image?.width,
