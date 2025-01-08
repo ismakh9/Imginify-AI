@@ -27,7 +27,7 @@ export default clerkMiddleware();
 // Specify configuration options for Clerk middleware
 export const config = {
   matcher: [
-    "/((?!.*\\..*|_next).*)", // Match all routes except static files and _next
+    "/((?!.+\\.[\\w]+$|_next).*)", "/(api|trpc)(.*)", // Match all routes except static files and _next
     "/",                      // Match the home route
     "/api/webhooks/clerk",    // Allow access to Clerk webhooks
     "/api/webhooks/stripe",   // Allow access to Stripe webhooks
