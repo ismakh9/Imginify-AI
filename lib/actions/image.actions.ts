@@ -109,16 +109,17 @@ export async function getAllImages({ limit = 9, page = 1, searchQuery = '' }: {
     })
 
     let expression = 'folder=imaginify';
+    
 
     if (searchQuery) {
       expression += ` AND ${searchQuery}`
     }
-
     const { resources } = await cloudinary.search
       .expression(expression)
       .execute();
-
+    // console.log(resources)
     const resourceIds = resources.map((resource: any) => resource.public_id);
+    // console.log(resourceIds)
 
     let query = {};
 
@@ -139,7 +140,7 @@ export async function getAllImages({ limit = 9, page = 1, searchQuery = '' }: {
     
     const totalImages = await Image.find(query).countDocuments();
     const savedImages = await Image.find().countDocuments();
-
+    
     return {
       data: JSON.parse(JSON.stringify(images)),
       totalPage: Math.ceil(totalImages / limit),

@@ -19,7 +19,7 @@ const MediaUploader = ({
   setImage,
   image,
   publicId,
-  type
+  type,
 }: MediaUploaderProps) => {
   const { toast } = useToast()
 
@@ -53,10 +53,11 @@ const MediaUploader = ({
 
   return (
     <CldUploadWidget
-      uploadPreset="jsm_imaginify"
+      uploadPreset="imaginify_ai"
       options={{
         multiple: false,
         resourceType: "image",
+         context: { caption: "test" },
       }}
       onSuccess={onUploadSuccessHandler}
       onError={onUploadErrorHandler}
