@@ -55,3 +55,4 @@ const Home = async ({ searchParams }: { searchParams: Params }) => {
 };
 
 export default Home;
+
