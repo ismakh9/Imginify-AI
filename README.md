@@ -2,6 +2,8 @@
 
 Welcome to **ImagIngy AI**, the **next-level** image editing experience powered by cutting-edge artificial intelligence. Whether you're looking to restore old memories, remove unwanted objects, or completely transform your images, **ImagIngy AI** is here to turn your photos into masterpieces!
 
+👉 [**View Demo**](#) (https://imginify-ai.vercel.app/)
+
 ## 🌟 **Features**
 
 - **💥 Powerful AI Editing**: Upload your image and unleash the magic of AI. Whether you need to restore, remove, or enhance any part of your photo, our smart tools do all the heavy lifting for you!
